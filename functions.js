@@ -20,7 +20,7 @@ const labIconWrapper = document.getElementById('labIconWrapper');
 const labText = document.getElementById('labText');
 
   const iconSequence = [
-    { icon: true, text: 'Camo Lab'}, //Logo
+    { icon: true, text: 'Camo Lab', logo: true}, //Logo
     { icon: 'box', text: 'Structure' },
     { icon: 'origami', text: 'Adaptability' },
     { icon: 'wand-2', text: 'Creativity' },
