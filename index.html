@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camo Lab - 3D Printing Costa Rica</title>
+    <meta name="description" content="Costa Rica's premier 3D printing laboratory - Mass production, prototyping, and home delivery">
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camo Lab - 3D Printing Costa Rica</title>
+    <meta name="description" content="Costa Rica's premier 3D printing laboratory - Mass production, prototyping, and home delivery">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navigation" class="nav">
+        <div class="nav-container">
+            <div class="nav-content">
+            <!-- Logo -->
+                <div class="nav-logo">
+                    <div class="logo-icon">
+                        <img src="img/Camolablogo2.svg"></img>
+                    </div>
+                    <span class="logo-text">Camo Lab Design</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="nav-menu">
+ <a href="#home" class="nav-link">Home</a>
+ <a href="#delivery" class="nav-link">Delivery</a>
+ <a href="#services" class="nav-link">Services</a>
+ <a href="#projects" class="nav-link">Projects</a>
+ <a href="#reviews" class="nav-link">Reviews</a>
+ <a href="#contact" class="nav-link">Contact</a>
+ <button class="btn btn-primary" onclick="scrollToSection('#contact')">Get Quote</button>
+                </div>
+
+                <!-- Mobile menu button -->
+ <button class="mobile-menu-btn" id="mobileMenuBtn">
+ <i data-lucide="menu" id="menuIcon"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-content">
+ <a href="#home" class="mobile-nav-link"><i data-lucide="box"></i>Home</a>
+ <a href="#delivery" class="mobile-nav-link"><i data-lucide="truck"></i>Delivery</a>
+ <a href="#services" class="mobile-nav-link"><i data-lucide="wrench"></i>Services</a>
+ <a href="#projects" class="mobile-nav-link"><i data-lucide="folder-open"></i>Projects</a>
+ <a href="#reviews" class="mobile-nav-link"><i data-lucide="message-square"></i>Reviews</a>
+ <a href="#contact" class="mobile-nav-link"><i data-lucide="phone"></i>Contact</a>
+ <button class="btn btn-primary" onclick="scrollToSection('#contact')">Get Quote</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-circle hero-circle-1"></div>
+            <div class="hero-circle hero-circle-2"></div>
+            <div class="hero-circle hero-circle-3"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <div class="hero-badge">
+                        <i data-lucide="zap"></i>
+                       Costa Rica's Premier 3D Printing Lab
+                    </div>
+        <h1 class="hero-title">
+            Transform Your
+        <span class="hero-title-gradient">Ideas Into Reality</span>
+        </h1>
+        <p class="hero-description">
+                        From rapid prototyping to mass production, we bring your concepts to life with cutting-edge 3D printing technology and home delivery across Costa Rica's GAM area.
+                    </p>
+                    
+         <div class="hero-buttons">
+         <button class="btn btn-primary btn-lg" onclick="scrollToSection('#contact')">
+         Start Your Project
+         <i data-lucide="arrow-right"></i>
+         </button>
+         <button class="btn btn-outline btn-lg" onclick="scrollToSection('#projects')">
+         <i data-lucide="play"></i>
+             View Our Work
+         </button>
+                    </div>
+<!--Estadisticas del la plataforma-->
+        <div class="hero-stats">
+        <div class="stat">
+           <div class="stat-number">500+</div>
+           <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat">
+           <div class="stat-number">48h</div>
+           <div class="stat-label">Average Delivery</div>
+        </div>
+        <div class="stat">
+           <div class="stat-number">99%</div>
+           <div class="stat-label">Client Satisfaction</div>
+        </div>
+      </div>
+    </div>
+              
+<!-- Imagen de la derecha -->
+                <div class="hero-right">
+                    <div class="hero-visual">
+                        <div class="hero-main-icon">
+                            <div class="pulse-icon" id="labIconWrapper">
+                                <img src="img/Camolablogo2.svg" class="logo-icon" alt="CamoLab Logo" />
+                                <span id="labIcon" data-lucide="box"></span>
+                            </div>
+                            <div id="labText" class="hero-dynamic-text">Camo Lab</div>
+                            <!--i data-lucide="box"></i>-->
+                        </div>
+                        <div class="hero-floating-icon hero-floating-1">
+                            <i data-lucide="globe"></i>
+                        </div>
+                        <div class="hero-floating-icon hero-floating-2">
+                            <i data-lucide="zap"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Section -->
+    <section id="delivery" class="delivery">
+     <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Simple Delivery Process</h2>
+                <p class="section-description">
+                    From concept to your doorstep in just four easy steps. Our streamlined process ensures 
+                    quality results with hassle-free delivery throughout Costa Rica's GAM area.
+                </p>
+        </div>
+<!--Pasos para solicitar un proyecto -->
+<!-- Paso 1 -->
+      <div class="delivery-steps">
+      <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-icon step-icon-blue">
+          <i data-lucide="upload"></i>
+        </div>
+        <h3 class="step-title">Upload Your Design</h3>
+            <p class="step-description">Send us your 3D files, sketches, or reference images. Our team will help optimize your design for 3D printing.</p>
+                </div>
+<!-- Paso 2 -->
+      <div class="step-card">
+      <div class="step-number">2</div>
+          <div class="step-icon step-icon-green">
+          <i data-lucide="map-pin"></i>
+          </div>
+          <h3 class="step-title">Choose Location</h3>
+             <p class="step-description">Select your delivery location within Costa Rica's Greater Metropolitan Area (GAM) for convenient pickup.</p>
+                </div>
+<!-- Paso 3 -->
+      <div class="step-card">
+      <div class="step-number">3</div>
+          <div class="step-icon step-icon-purple">
+          <i data-lucide="calendar"></i>
+          </div>
+          <h3 class="step-title">Select Delivery Date</h3>
+              <p class="step-description">Pick your preferred delivery date. Most projects are completed within 24-48 hours.</p>
+                </div>
+<!-- Paso 4 -->
+      <div class="step-card">
+      <div class="step-number">4</div>
+          <div class="step-icon step-icon-primary">
+          <i data-lucide="check-circle"></i>
+          </div>
+          <h3 class="step-title">Receive Your Product</h3>
+              <p class="step-description">Get your high-quality 3D printed item delivered directly to your door, ready to use.</p>
+                </div>
+            </div>
+<!-- CTA para llevar a cotizar -->
+     <div class="delivery-cta">
+       <h3>Ready to Start Your Project?</h3>
+       <p>Upload your design and get a free quote within 24 hours</p>
+       <button class="btn btn-primary" onclick="scrollToSection('#contact')">
+                    Get Started Now
+                    <i data-lucide="upload"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-description">
+                    From initial concept to final delivery, we provide comprehensive 3D printing solutions 
+                    tailored to your needs and timeline.
+                </p>
+            </div>
+<!-- Servicio 1 -->
+            <div class="services-grid">
+                <div class="service-card">
+                <div class="service-header">
+            <div class="service-icon service-icon-blue">
+                 <i data-lucide="factory"></i>
+                    </div>
+            <h3 class="service-title">Mass Production</h3>
+                    </div>
+                <p class="service-description">Scale your ideas with our high-volume 3D printing capabilities. Perfect for product launches, promotional items, and large orders.</p>
+                    <div class="service-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>High-speed printing</li>
+                            <li>Consistent quality</li>
+                            <li>Bulk pricing</li>
+                            <li>Fast turnaround</li>
+                        </ul>
+                    </div>
+                </div>
+<!-- Servicio 2 -->
+           <div class="service-card">
+             <div class="service-header">
+             <div class="service-icon service-icon-orange">
+                  <i data-lucide="lightbulb"></i>
+                     </div>
+             <h3 class="service-title">Prototyping</h3>
+                    </div>
+                 <p class="service-description">Bring your concepts to life with rapid prototyping. Test, iterate, and perfect your designs before full production.</p>
+                    <div class="service-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Quick iterations</li>
+                            <li>Multiple materials</li>
+                            <li>Design feedback</li>
+                            <li>Cost-effective testing</li>
+                        </ul>
+                    </div>
+                </div>
+<!-- Servicio 3 -->
+           <div class="service-card">
+             <div class="service-header">
+             <div class="service-icon service-icon-purple">
+                  <i data-lucide="palette"></i>
+                      </div>
+          <h3 class="service-title">Custom 3D Modeling</h3>
+                    </div>
+               <p class="service-description">Don't have a 3D file? Our expert designers will create detailed models from your sketches, photos, or ideas.</p>
+                    <div class="service-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Professional modeling</li>
+                            <li>File optimization</li>
+                            <li>Design consultation</li>
+                            <li>Unlimited revisions</li>
+                        </ul>
+                    </div>
+                </div>
+<!-- Servicio 4 -->
+           <div class="service-card">
+             <div class="service-header">
+             <div class="service-icon service-icon-primary">
+                  <i data-lucide="truck"></i>
+                        </div>
+               <h3 class="service-title">Home Delivery</h3>
+                    </div>
+                    <p class="service-description">Convenient delivery service throughout Costa Rica's GAM area. Your prints delivered safely to your doorstep.</p>
+                    <div class="service-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>GAM area coverage</li>
+                            <li>Secure packaging</li>
+                            <li>Tracking available</li>
+                            <li>Flexible scheduling</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Recent Projects</h2>
+                <p class="section-description">
+                    Explore our portfolio of successful 3D printing projects across various industries and applications.
+                </p>
+            </div>
+<!-- Filtros de los proyectos -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="prototyping">Prototyping</button>
+                <button class="filter-btn" data-filter="mass-production">Mass Production</button>
+                <button class="filter-btn" data-filter="custom-design">Custom Design</button>
+                <button class="filter-btn" data-filter="industrial">Industrial</button>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+       <!-- Projects will be loaded by JavaScript, double check line //los proyectos destinan... -->
+            </div>
+                <div class="view-more-container">
+                    <button id="viewMoreBtn" class="btn btn-primary btn-lg">
+                        <span id="viewMoreText">View More</span>
+                        <i id="chevronIcon" data-lucide="chevron-down"></i>
+                    </button>
+                </div>
+
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+          <div class="section-header">
+          <h2 class="section-title">What Our Clients Say</h2>
+          <p class="section-description">
+                    Don't just take our word for it. Here's what our satisfied clients across Costa Rica have to say about their experience with Camo Lab.
+          </p>
+          </div>
+
+            <div class="reviews-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track" id="reviewsTrack">
+        <!-- Reviews will be loaded by JavaScript, double check "comentarios clientes" -->
+                    </div>
+                </div>
+                
+<!-- Accion del carrusel para comentarios -->
+                <button class="carousel-btn carousel-btn-prev" id="prevReview">
+                    <i data-lucide="chevron-left"></i>
+                </button>
+                <button class="carousel-btn carousel-btn-next" id="nextReview">
+                    <i data-lucide="chevron-right"></i>
+                </button>
+
+                <div class="carousel-dots" id="reviewsDots">
+            <!-- Dots will be generated by JavaScript -->
+                </div>
+            </div>
+<!-- KPIs de la aplicacion para dar mayor confianza al publico -->
+         <div class="reviews-stats">
+            <div class="stat">
+            <div class="stat-number">4.9/5</div>
+            <div class="stat-label">Average Rating</div>
+                </div>
+            <div class="stat">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Happy Clients</div>
+                </div>
+            <div class="stat">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">On-Time Delivery</div>
+                </div>
+            <div class="stat">
+            <div class="stat-number">24h</div>
+            <div class="stat-label">Avg Response Time</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Bring Your Ideas to Life</h2>
+                <p class="section-description">
+                    Ready to start your 3D printing project? Get in touch with us for a free consultation 
+                    and personalized quote.
+                </p>
+            </div>
+
+       <div class="contact-content">
+       <div class="contact-form-section">
+           <div class="card">
+           <h3>Send Us Your Project Details</h3>
+              <form id="contactForm" class="contact-form">
+              <div class="form-row">
+              <div class="form-group">
+              <label for="fullName">Full Name *</label>
+ <input type="text" id="fullName" name="fullName" required>
+              </div>
+       <div class="form-group">
+             <label for="email">Email Address *</label>
+ <input type="email" id="email" name="email" required>
+       </div>
+              </div>
+
+       <div class="form-group">
+             <label for="service">Service Needed *</label>
+             <select id="service" name="service" required>
+<option value="">Select the service you need</option>
+<option value="mass-production">Mass Production</option>
+<option value="prototyping">Prototyping</option>
+<option value="custom-modeling">Custom 3D Modeling</option>
+<option value="home-delivery">Home Delivery</option>
+<option value="consultation">Design Consultation</option>
+<option value="other">Other</option>
+             </select>
+       </div>
+
+       <div class="form-group">
+           <label for="description">Project Description *</label>
+       <textarea id="description" name="description" rows="4" placeholder="Describe your project, including dimensions, quantity, materials, and any specific requirements..." required></textarea>
+       </div>
+
+       <div class="form-group">
+           <label for="message">Additional Message</label>
+       <textarea id="message" name="message" rows="3" placeholder="Any additional information, timeline requirements, or questions..."></textarea>
+       </div>
+
+       <div class="form-group">
+           <label>Upload Reference Files</label>
+        <div class="file-upload">
+        <i data-lucide="upload"></i>
+          <div>
+<span class="upload-text">Click to upload</span> or drag and drop
+          </div>
+          <div class="upload-hint">3D files, images, sketches (MAX 10MB)</div>
+          <input type="file" id="fileUpload" name="files" multiple>
+        </div>
+       </div>
+
+       <button type="submit" class="btn btn-primary btn-lg btn-full">
+         <i data-lucide="send"></i>
+          Send Project Request
+       </button>
+     </form>
+    </div>
+   </div>
+<!-- Info de contacto de la empresa -->
+<div class="contact-info-section">
+                    <div class="card">
+                        <h3>Get in Touch</h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="map-pin"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <div class="contact-label">Location</div>
+                                    <div class="contact-value">San José, Costa Rica<br>GAM Area Coverage</div>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <div class="contact-label">Phone</div>
+                                    <div class="contact-value">+506 1234-5678</div>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <div class="contact-label">Email</div>
+                                    <div class="contact-value">hello@camolab.cr</div>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="clock"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <div class="contact-label">Business Hours</div>
+                                    <div class="contact-value">Mon-Fri: 8AM-6PM<br>Sat: 9AM-2PM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!-- Garantia de los servicios dew la empresa -->
+              <div class="card guarantee-card">
+                   <div class="guarantee-icon">
+                   <i data-lucide="clock"></i>
+                   </div>
+                   <h3>Quick Response Guarantee</h3>
+                   <p>We respond to all project inquiries within 24 hours with a detailed quote and timeline.</p>
+                   <div class="guarantee-features">
+                       <div class="guarantee-feature">
+                       <div class="feature-dot"></div>
+                        Free Consultation
+                       </div>
+                       <div class="guarantee-feature">
+                       <div class="feature-dot"></div>
+                         No Hidden Costs
+                       </div>
+                   </div>
+              </div>
+             </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <img src="img/Camolablogo2.svg"></img>
+                        </div>
+                    <span class="logo-text">Camo Lab Design</span>
+                    </div>
+                    <p class="footer-description">
+                        Costa Rica's premier 3D printing laboratory, transforming ideas into reality with cutting-edge technology and exceptional service.
+                    </p>
+                    <div class="social-links">
+<a href="#" class="social-link"><i data-lucide="facebook"></i></a>
+<a href="#" class="social-link"><i data-lucide="instagram"></i></a>
+<a href="#" class="social-link"><i data-lucide="linkedin"></i></a>
+<!--<a href="#" class="social-link"><i data-lucide="twitter"></i></a> eliminaré twitter porque no es un app existente-->
+                    </div>
+                </div>
+
+         <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="#reviews">Reviews</a></li>
+              </ul>
+         </div>
+
+         <div class="footer-services">
+              <h4>Services</h4>
+              <ul>
+                  <li>Mass Production</li>
+                  <li>Prototyping</li>
+                  <li>Custom 3D Modeling</li>
+                  <li>Home Delivery</li>
+                  <li>Design Consultation</li>
+              </ul>
+         </div>
+
+         <div class="footer-contact">
+              <h4>Contact Info</h4>
+              <div class="footer-contact-item">
+                   <i data-lucide="map-pin"></i>
+              <span>San José, Costa Rica</span>
+              </div>
+              <div class="footer-contact-item">
+                   <i data-lucide="phone"></i>
+              <span>+506 1234-5678</span>
+              </div>
+              <div class="footer-contact-item">
+                   <i data-lucide="mail"></i>
+              <span>hello@camolab.cr</span>
+              </div>
+         </div>
+        </div>
+
+        <div class="footer-bottom">
+              <div class="footer-copyright">
+              © 2025 Camo Lab. All rights reserved.
+              </div>
+              <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+              </div>
+        </div>
+       </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="functions.js"></script>
+</body>
+</html>
