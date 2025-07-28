@@ -798,3 +798,20 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', activateMenu);
   activateMenu(); // Run on page load
 });
+
+// File upload icon change
+document.addEventListener('DOMContentLoaded', () => {
+  const fileInput = document.getElementById('fileUpload');
+  const uploadIcon = document.getElementById('uploadIcon');
+
+  if (fileInput && uploadIcon) {
+    fileInput.addEventListener('change', function () {
+      if (fileInput.files && fileInput.files.length > 0) {
+        uploadIcon.setAttribute('data-lucide', 'shield-check');
+      } else {
+        uploadIcon.setAttribute('data-lucide', 'upload');
+      }
+      lucide.createIcons();
+    });
+  }
+});
