@@ -769,3 +769,32 @@ function scrollToSection(href) {
 // Global function for buttons
 window.scrollToSection = scrollToSection;
 window.goToReview = goToReview;
+
+// Active menu highlighting on scroll
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+  function activateMenu() {
+    let scrollY = window.pageYOffset;
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 80; // adjust offset if you have a fixed header
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute('id');
+
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === `#${sectionId}`);
+        });
+        mobileLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === `#${sectionId}`);
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', activateMenu);
+  activateMenu(); // Run on page load
+});
