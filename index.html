@@ -429,12 +429,15 @@
        <div class="form-group">
            <label>Upload Reference Files</label>
         <div class="file-upload">
-        <i data-lucide="upload"></i>
+        <i data-lucide="upload" id="uploadIcon"></i>
           <div>
+              <!-- Upload files section [añadir modificaci´øn de cuando ya se subio un archivio el icono cambie tipo check] -->
 <span class="upload-text">Click to upload</span> or drag and drop
           </div>
-          <div class="upload-hint">3D files, images, sketches (MAX 10MB)</div>
-          <input type="file" id="fileUpload" name="files" multiple>
+              <!-- Punto de mejora documentos aceptados Hint for accepted file formats -->
+          <div class="upload-hint">Accepted formats: Images (JPG, PNG, GIF, SVG, BMP, TIFF, WEBP, HEIC), PDF, Adobe files (AI, PSD, EPS, INDD, XD), 3D files (OBJ, STL, STEP, IGES), ZIP/RAR (MAX 10MB)</div>
+          <input type="file" id="fileUpload" name="files" 
+          multiple accept=".jpg,.jpeg,.png,.gif,.pdf,.ai,.psd,.svg,.eps,.tiff,.tif,.indd,.xd,.bmp,.webp,.heic,.zip,.rar,.7z,.obj,.stl,.step,.iges"/>
         </div>
        </div>
 
