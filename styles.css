@@ -299,6 +299,15 @@ body {
 .mobile-nav-link:hover {
     color: var(--primary);
 }
+
+/*Punto de mejora, mantener el active en el menu dependiendo del area*/
+.nav-link.active,
+.mobile-nav-link.active {
+  color: var(--primary); /* O el color que prefieras */
+  font-weight: bold;
+  /* Otros estilos para resaltar */
+}
+
 /*Seccion inicial con info*/
 /* Hero Section */
 .hero {
