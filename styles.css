@@ -37,6 +37,29 @@
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
+/*Boton whatsapp flotante*/
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #25d366cc; /* 80% opacity */
+    color: white;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 1000;
+    font-size: 2rem;
+    transition: background 0.2s;
+    backdrop-filter: blur(2px);
+}
+.whatsapp-float:hover {
+    background: #128c7ecc;
+}
+
 body {
     font-family: var(--font-family);
     line-height: 1.6;
@@ -1381,6 +1404,30 @@ body {
     margin-top: 0.25rem;
 }
 
+/*punto de mejora vista previa*/
+.file-preview {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+.file-preview-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f6f6f6;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+.file-preview-thumb {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    background: #eee;
+}
+
 .contact-info-section {
     display: flex;
     flex-direction: column;
@@ -1432,6 +1479,20 @@ body {
     font-size: 0.875rem;
     color: var(--muted-foreground);
     line-height: 1.4;
+}
+
+/*Area del mapa */
+.contact-map {
+    margin: 0.5rem 0 1rem;
+    padding: 0.5rem; 
+    gap: 1.5rem; 
+    border-radius: 1rem;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-lg, 0 4px 16px rgba(0,0,0,0.10));
+    display: flex;
 }
 
 .guarantee-card {
