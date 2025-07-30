@@ -592,6 +592,73 @@ body {
     animation-delay: 1.5s;
 }
 
+/*PArte Jeff */
+.carousel-section {
+  padding: 2rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.carousel-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-track-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+  will-change: transform;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  z-index: 10;
+  padding: 0.5rem;
+  transition: background 0.2s;
+}
+
+.carousel-btn:hover {
+  background: #efefef;
+}
+
+#prevCarouselBtn {
+  left: 0.5rem;
+}
+
+#nextCarouselBtn {
+  right: 0.5rem;
+}
+/*fin parte jeff */
+
 /* Delivery Section */
 .delivery {
     padding: var(--section-padding);
@@ -716,6 +783,23 @@ body {
     color: var(--muted-foreground);
     margin-bottom: 1.5rem;
 }
+
+/*Parte Tracy*/
+.contenedor-gif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; 
+    padding: 20px;
+}
+
+.gif-redondeado {
+    border-radius: 20px; 
+    max-width: 100%;
+    height: auto;
+}
+
+/*Final parte Tracy*/
 
 /* Services Section */
 .services {
