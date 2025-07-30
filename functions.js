@@ -799,21 +799,70 @@ document.addEventListener('DOMContentLoaded', () => {
   activateMenu(); // Run on page load
 });
 
-// File upload icon change
+// File upload icon change punto de mejora para vista previa, boto de eliminado y click 
 document.addEventListener('DOMContentLoaded', () => {
   const fileInput = document.getElementById('fileUpload');
   const uploadIcon = document.getElementById('uploadIcon');
+  const filePreview = document.getElementById('filePreview');
+  const uploadText = document.querySelector('.upload-text');
+  const removeFilesBtn = document.getElementById('removeFilesBtn');
 
-  if (fileInput && uploadIcon) {
-    fileInput.addEventListener('change', function () {
-      if (fileInput.files && fileInput.files.length > 0) {
-        uploadIcon.setAttribute('data-lucide', 'shield-check');
+  function updateFileUI() {
+    // Cambia el icono
+    uploadIcon.setAttribute(
+      'data-lucide',
+      fileInput.files && fileInput.files.length > 0 ? 'shield-check' : 'upload'
+    );
+    lucide.createIcons();
+
+    // Oculta/mostrar texto de ayuda
+    if (uploadText) {
+      uploadText.style.display = (fileInput.files && fileInput.files.length > 0) ? 'none' : '';
+    }
+
+    // Mostrar/ocultar botón de remover
+    if (removeFilesBtn) {
+      removeFilesBtn.style.display = (fileInput.files && fileInput.files.length > 0) ? 'inline-flex' : 'none';
+    }
+
+    // Vista previa
+    filePreview.innerHTML = '';
+    Array.from(fileInput.files).forEach(file => {
+      const item = document.createElement('div');
+      item.className = 'file-preview-item';
+      if (file.type.startsWith('image/')) {
+        const img = document.createElement('img');
+        img.className = 'file-preview-thumb';
+        img.src = URL.createObjectURL(file);
+        img.onload = () => URL.revokeObjectURL(img.src);
+        item.appendChild(img);
       } else {
-        uploadIcon.setAttribute('data-lucide', 'upload');
+        const icon = document.createElement('i');
+        icon.setAttribute('data-lucide', 'file');
+        icon.style.fontSize = '1.5rem';
+        item.appendChild(icon);
+        lucide.createIcons();
       }
-      lucide.createIcons();
+      const name = document.createElement('span');
+      name.textContent = file.name;
+      item.appendChild(name);
+      filePreview.appendChild(item);
     });
   }
+
+  if (fileInput && uploadIcon) {
+    fileInput.addEventListener('change', updateFileUI);
+  }
+
+  if (removeFilesBtn && fileInput) {
+    removeFilesBtn.addEventListener('click', () => {
+      fileInput.value = '';
+      updateFileUI();
+    });
+  }
+
+  // Inicializa el estado al cargar
+  updateFileUI();
 });
 
 //Parte de Jeff [modificada]
