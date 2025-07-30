@@ -815,3 +815,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+//Parte de Jeff [modificada]
+function initImageCarousel() {
+  const track = document.getElementById('carouselTrack');
+  const prevBtn = document.getElementById('prevCarouselBtn');
+  const nextBtn = document.getElementById('nextCarouselBtn');
+  const slides = track ? track.querySelectorAll('.carousel-slide') : [];
+  let currentIndex = 0;
+
+  if (!track || slides.length <= 1) return;
+
+  function updateCarousel() {
+    const offset = -currentIndex * 100;
+    track.style.transform = `translateX(${offset}%)`;
+  }
+
+  prevBtn?.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+  });
+
+  updateCarousel();
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  initImageCarousel();
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
+});
