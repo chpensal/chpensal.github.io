@@ -24,11 +24,12 @@
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
-    <!-- Punto de mejora boton flotante de whatsapp -->
+
+<!-- Punto de mejora boton flotante de whatsapp -->
 <a href="https://wa.me/50612345678" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
   <i data-lucide="message-circle-more"></i>
 </a>
-    
+
 <body>
     <!-- Navigation -->
     <nav id="navigation" class="nav">
@@ -146,6 +147,7 @@
             </div>
         </div>
     </section>
+<!-- End Hero Section -->
 
 <!-- Parte Jeff -->
 <section id="imageCarouselSection" class="carousel-section">
@@ -167,7 +169,7 @@
   </div>
 </section>
  <!-- Parte Jeff -->
-    
+
     <!-- Delivery Section -->
     <section id="delivery" class="delivery">
      <div class="container">
@@ -234,7 +236,8 @@
         <img class="gif-redondeado" src="https://3dprint.com/wp-content/uploads/2015/04/genesis1.gif" alt="GIF impresion" width="800px" height="800px">
     </div>
     <!-- Parte Tracy -->
-    
+
+
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
@@ -457,19 +460,22 @@
            <label for="message">Additional Message</label>
        <textarea id="message" name="message" rows="3" placeholder="Any additional information, timeline requirements, or questions..."></textarea>
        </div>
-
+<!-- Upload files section [añadir modificaci´øn de cuando ya se subio un archivio el icono cambie tipo check] -->
        <div class="form-group">
            <label>Upload Reference Files</label>
         <div class="file-upload">
-        <i data-lucide="upload" id="uploadIcon"></i>
-          <div>
-              <!-- Upload files section [añadir modificaci´øn de cuando ya se subio un archivio el icono cambie tipo check] -->
-<span class="upload-text">Click to upload</span> or drag and drop
-          </div>
-              <!-- Punto de mejora documentos aceptados Hint for accepted file formats -->
-          <div class="upload-hint">Accepted formats: Images (JPG, PNG, GIF, SVG, BMP, TIFF, WEBP, HEIC), PDF, Adobe files (AI, PSD, EPS, INDD, XD), 3D files (OBJ, STL, STEP, IGES), ZIP/RAR (MAX 10MB)</div>
-          <input type="file" id="fileUpload" name="files" 
-          multiple accept=".jpg,.jpeg,.png,.gif,.pdf,.ai,.psd,.svg,.eps,.tiff,.tif,.indd,.xd,.bmp,.webp,.heic,.zip,.rar,.7z,.obj,.stl,.step,.iges"/>
+            <!-- Punto de mejora vista previa file formats y unto de mejora documentos aceptados Hint for accepted file formats -->         
+            <div id="filePreview" class="file-preview"></div>
+                <span data-lucide="upload" id="uploadIcon"></span>
+                    <div>
+                        <span class="upload-text">Click to upload</span> or drag and drop
+                    </div>
+                <div class="upload-hint">Accepted formats: Images (JPG, PNG, GIF, SVG, BMP, TIFF, WEBP, HEIC), PDF, Adobe files (AI, PSD, EPS, INDD, XD), 3D files (OBJ, STL, STEP, IGES), ZIP/RAR (MAX 10MB)</div>
+                    <input type="file" id="fileUpload" name="files" 
+                        multiple accept=".jpg,.jpeg,.png,.gif,.pdf,.ai,.psd,.svg,.eps,.tiff,.tif,.indd,.xd,.bmp,.webp,.heic,.zip,.rar,.7z,.obj,.stl,.step,.iges"/>
+                    <button type="button" id="removeFilesBtn" class="btn btn-outline" style="margin-top:1rem; display:none;">
+                        <i data-lucide="trash-2"></i> Remove Files
+                    </button>
         </div>
        </div>
 
@@ -548,7 +554,7 @@
                 <div class="contact-map">
                     <iframe    src="https://www.google.com/maps?q=San+Jose+Costa+Rica+GAM&z=11&output=embed"
                         width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>    
+                </div>
              </div>
             </div>
         </div>
