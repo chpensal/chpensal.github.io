@@ -20,7 +20,7 @@ const labIconWrapper = document.getElementById('labIconWrapper');
 const labText = document.getElementById('labText');
 
   const iconSequence = [
-    { icon: true, text: 'Camo Lab', logo: true}, //Logo en loop
+    { icon: true, text: 'Camo Lab', logo: true}, //Logo
     { icon: 'box', text: 'Structure' },
     { icon: 'origami', text: 'Adaptability' },
     { icon: 'wand-2', text: 'Creativity' },
@@ -29,7 +29,8 @@ const labText = document.getElementById('labText');
     { icon: 'pen-tool', text: 'Design' },
     { icon: 'check-square', text: 'Quality' },
     { icon: 'clock', text: 'Efficiency' },
-    { icon: 'heart', text: 'Passion' }
+    { icon: 'heart', text: 'Passion' },
+
   ];
   // Animacion pulso iconos
 let currentIndex = 0;
@@ -780,7 +781,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let scrollY = window.pageYOffset;
 
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 80; // adjust offset if you have a fixed header
+      const sectionTop = section.offsetTop - 80; //
       const sectionHeight = section.offsetHeight;
       const sectionId = section.getAttribute('id');
 
@@ -865,7 +866,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateFileUI();
 });
 
-//Parte de Jeff [modificada]
+//Parte de Jeff [modificado porque daba 2 errores]
 function initImageCarousel() {
   const track = document.getElementById('carouselTrack');
   const prevBtn = document.getElementById('prevCarouselBtn');
